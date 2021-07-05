@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5em;
+  background: hsl(218, 28%, 13%);
+}
+
+header,
+h1,
+h2,
+h3,
+.cta {
+  font-family: "Raleway";
+}
+
+h1 {
+  line-height: 1.3em;
+}
+
+/*hero section*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 1em;
+}
+
+header > div > img {
+  width: 5em;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+  list-style: none;
+  margin-left: 1.5em;
+}
+
+nav > ul > li > a {
+  color: rgb(212, 209, 209);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+}
+
+main {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  background: hsl(217, 28%, 15%);
+}
+
+#illustration-intro {
+  position: absolute;
+  width: 75vw;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#curvy-h1-para-wrapper {
+  position: absolute;
+  bottom: 0;
+  margin-top: -3em;
+}
+
+#bg-curvy-mobile {
+  position: relative;
+  width: 100vw;
+  margin-bottom: 4vw;
+}
+
+#main-h1-para-wrapper {
+  margin-top: -9vw;
+  z-index: 1;
+  padding: 0 2em 2em 2em;
+  background: hsl(218, 28%, 13%);
+  text-align: center;
+  color: white;
+}
+
+#main-h1 {
+  position: relative;
+  z-index: 2;
+  bottom: 3em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#main-h1-para-wrapper > p {
+  position: relative;
+  margin-top: -3.5em;
+  color: rgb(212, 209, 209);
+  z-index: 1;
+}
+
+.cta {
+  background: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  padding: 1em 6em;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.cta:hover {
+  background: hsl(176, 68%, 64%);
+  cursor: pointer;
+}
+
+#first-section-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 5em;
+  padding: 5em 2em;
+}
+
+#first-section-flex-wrapper h3 {
+  color: white;
+}
+
+#first-section-flex-wrapper p {
+  color: rgb(212, 209, 209);
+}
+
+#first-section-flex-wrapper > div {
+  text-align: center;
+}
+
+.first-section-img {
+  width: 18%;
+  margin-bottom: 1em;
+}
+
+#first-section-security-icon {
+  width: 15%;
+}
+
+#first-section-flex-wrapper > div > h3 {
+  margin-bottom: 0.5em;
+}
+
+#second-section-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 2em;
+  padding: 0 2em;
+  margin-bottom: 8em;
+}
+
+#second-section-flex-wrapper > img {
+  align-self: center;
+  width: 80vw;
+}
+
+#second-section-flex-wrapper > div > h3 {
+  color: white;
+}
+
+#second-section-flex-wrapper > div > p {
+  color: rgb(212, 209, 209);
+}
+
+#second-section-flex-wrapper > div > h3,
+p {
+  margin-bottom: 1em;
+}
+
+#second-section-flex-wrapper > div > span {
+  color: hsl(176, 68%, 64%);
+}
+
+#third-section-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 1.5em;
+  padding: 0 2.5em;
+  margin-bottom: 5em;
+  color: rgb(212, 209, 209);
+}
+
+#third-section-flex-wrapper::before {
+  content: "";
+  height: 0.8em;
+  width: 1.3em;
+  background-image: url(images/bg-quotes.png);
+  margin-bottom: -1em;
+  background-position: center;
+  background-size: cover;
+}
+
+#third-section-flex-wrapper img {
+  width: 6.5vw;
+  border-radius: 50px;
+}
+
+#third-section-flex-wrapper > div {
+  background: hsl(213, 37%, 17%);
+  padding: 1.5em;
+  font-size: 0.7rem;
+  line-height: 1.7em;
+  border-radius: 10px;
+}
+
+.testimonial-name {
+  color: white;
+  font-weight: bold;
+}
+
+#email-form-section {
+  padding: 0 1em;
+  color: rgb(212, 209, 209);
+}
+
+#form-wrapper {
+  position: relative;
+  top: 10em;
+  border-radius: 10px;
+  background: hsl(213, 37%, 17%);
+  text-align: center;
+  padding: 2em 1em;
+  margin-top: -5em;
+}
+
+#form-wrapper > h3 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+#form-wrapper > form > input {
+  background: white;
+  padding: 1em 9em 1em 2em;
+  border-radius: 20px;
+}
+
+#form-wrapper > form > input::placeholder {
+  font-size: 0.8em;
+  color: rgb(189, 186, 186);
+}
+
+footer {
+  color: white;
+  background: hsl(209, 66%, 9%);
+  padding: 15em 1em 1em 1em;
+}
+
+footer > img {
+  margin: 0 0 2em 1.5em;
+}
+
+footer > ul > li {
+  list-style: none;
+}
+
+footer > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
