@@ -2,10 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-family: "Raleway", sans-serif;
   line-height: 1.5em;
@@ -224,12 +224,14 @@ p {
 
 #email-form-section {
   padding: 0 1em;
+  z-index: 2;
   color: rgb(212, 209, 209);
 }
 
 #form-wrapper {
   position: relative;
   top: 10em;
+  z-index: 2;
   border-radius: 10px;
   background: hsl(213, 37%, 17%);
   text-align: center;
@@ -246,6 +248,7 @@ p {
   background: white;
   padding: 1em 9em 1em 2em;
   border-radius: 20px;
+  margin-bottom: 1em;
 }
 
 #form-wrapper > form > input::placeholder {
@@ -254,13 +257,33 @@ p {
 }
 
 footer {
+  position: relative;
+  bottom: 0;
+  z-index: 1;
   color: white;
   background: hsl(209, 66%, 9%);
   padding: 15em 1em 1em 1em;
 }
 
 footer > img {
+  width: 10em;
   margin: 0 0 2em 1.5em;
+}
+
+#footer-first-para::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url(images/icon-location.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: space-around;
 }
 
 footer > ul > li {
@@ -270,4 +293,37 @@ footer > ul > li {
 footer > ul > li > a {
   text-decoration: none;
   color: white;
+}
+
+#flex-footer-ul-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 4em;
+}
+
+.flex-footer-li-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.flex-footer-li-container > li {
+  list-style: none;
+}
+
+.flex-footer-li-container > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+#flex-social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 4em 0 2em 0;
+}
+
+.svg-social-icons {
+  width: 1.8em;
 }
