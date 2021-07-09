@@ -181,7 +181,32 @@ p {
 }
 
 #second-section-flex-wrapper > div > span {
+  position: relative;
   color: hsl(176, 68%, 64%);
+}
+
+#arrow-icon-animation::after {
+  content: "";
+  position: absolute;
+  width: 9.2em;
+  height: 0.1em;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -0.5em;
+  background: red;
+}
+
+#arrow-icon-animation::before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 0;
+  bottom: 0;
+  margin-right: -2em;
+  background-image: url(images/icon-arrow.svg);
+  background-position: center;
+  background-size: cover;
 }
 
 #third-section-flex-wrapper {
@@ -198,7 +223,7 @@ p {
   content: "";
   height: 0.8em;
   width: 1.3em;
-  background-image: url(images/bg-quotes.png);
+  background-image: url(bg-quotes.png);
   margin-bottom: -1em;
   background-position: center;
   background-size: cover;
@@ -249,6 +274,7 @@ p {
   padding: 1em 9em 1em 2em;
   border-radius: 20px;
   margin-bottom: 1em;
+  border: none;
 }
 
 #form-wrapper > form > input::placeholder {
@@ -267,23 +293,67 @@ footer {
 
 footer > img {
   width: 10em;
-  margin: 0 0 2em 1.5em;
+  margin: 0 0 2em 1em;
 }
 
-#footer-first-para::before {
+#footer-location-para {
+  position: relative;
+  padding-left: 3em;
+}
+
+#footer-location-para::before {
   content: "";
-  width: 1em;
-  height: 1em;
+  position: absolute;
+  height: 1.1em;
+  width: 0.8em;
+  top: 0.3em;
   background-image: url(images/icon-location.svg);
+  background-position: top;
+  background-size: cover;
+  margin-left: -2em;
+}
+
+#footer-phoneNumber {
+  position: relative;
+  padding-left: 3em;
+}
+
+#footer-phoneNumber::before {
+  content: "";
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  top: 0.3em;
+  margin-left: -2em;
+  background-image: url(images/icon-phone.svg);
   background-position: center;
   background-size: cover;
 }
 
-footer > ul {
+#footer-example-email {
+  position: relative;
+  padding-left: 3em;
+}
+
+#footer-example-email::before {
+  content: "";
+  position: absolute;
+  height: 1em;
+  width: 1.5em;
+  border-radius: 2px;
+  top: 0.3em;
+  margin-left: -2em;
+  background-image: url(images/icon-email.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+#flex-footer-ul-container {
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
-  align-items: space-around;
+  gap: 2em;
+  margin-top: 4em;
+  padding-left: 1em;
 }
 
 footer > ul > li {
@@ -295,11 +365,11 @@ footer > ul > li > a {
   color: white;
 }
 
-#flex-footer-ul-container {
+footer > ul {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
-  gap: 2em;
-  margin-top: 4em;
+  align-items: space-around;
 }
 
 .flex-footer-li-container {
@@ -313,8 +383,12 @@ footer > ul > li > a {
 }
 
 .flex-footer-li-container > li > a {
-  color: white;
+  color: rgb(212, 209, 209);
   text-decoration: none;
+}
+
+.flex-footer-li-container > li > a:hover {
+  color: white;
 }
 
 #flex-social-media-icons {
@@ -326,4 +400,9 @@ footer > ul > li > a {
 
 .svg-social-icons {
   width: 1.8em;
+}
+
+.svg-social-icons:hover {
+  cursor: pointer;
+  filter: invert(0.5) sepia(1) hue-rotate(175deg) saturate(6) brightness(200%);
 }
