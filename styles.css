@@ -73,10 +73,13 @@ img {
 
 /*hero section ---------------------------------------------------------------------------------------*/
 main {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  background: hsl(217, 28%, 15%);
+  text-align: center;
+  /* background: hsl(217, 28%, 15%); */
+  background: red;
 }
 
 header {
@@ -112,48 +115,50 @@ header > img {
   width: 5em;
 }
 
-#hero-section-img-container {
-  width: 100%;
-  text-align: center;
+#main-illustration-container {
+  padding: 0 1.5em;
 }
 
-#hero-section-img-container > img:nth-of-type(1) {
+#main-illustration-container > img {
   position: relative;
-  width: 21em;
   margin-bottom: -2em;
   z-index: 1;
 }
 
-#h1-hero-section {
-  position: relative;
-  bottom: 4.5em;
-  text-align: center;
-  padding: 0 1em;
-}
-
-#p-button-hero-container {
-  position: relative;
-  padding: 1em 2em;
-  margin-top: -6.5em;
-  background: hsl(218, 28%, 13%);
-  text-align: center;
-}
-
-#p-button-hero-container > p {
-  font-size: 0.8rem;
-}
-
-#p-button-hero-container > button {
-  margin-top: 1em;
+main > section > img:nth-of-type(1) {
+  margin-bottom: -1em;
 }
 
 /* first section  -----------------------------------------------------------------------------*/
+/* transition zone h1-para-overlap-main-first-section-container */
+
+#h1-para-overlap-main-first-section-container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  margin-top: -10.5em;
+}
+
+#h1-para-overlap-main-first-section-container > h1 {
+}
+
+#h1-para-overlap-main-first-section-container > p {
+  font-size: 0.9rem;
+}
+
+#h1-para-overlap-main-first-section-container > .cta {
+  width: 20em;
+}
 
 #first-section-flex-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   gap: 5em;
+  position: relative;
   padding: 5em 2em;
 }
 
@@ -459,3 +464,5 @@ footer > ul {
   cursor: pointer;
   filter: invert(0.5) sepia(1) hue-rotate(175deg) saturate(6) brightness(200%);
 }
+
+/* media queries ------------------------------------------------------------------------------------------------ */
