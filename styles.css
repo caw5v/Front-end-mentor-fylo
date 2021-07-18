@@ -23,10 +23,11 @@ h3,
 
 p {
   color: rgb(212, 209, 209);
+  line-height: 1.5em;
 }
 
 h1 {
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 img {
@@ -39,10 +40,11 @@ img {
     hsl(176, 68%, 64%),
     hsl(198, 60%, 50%) 60%
   );
-  padding: 1em 6em;
+  padding: 2vw 20%;
   border-radius: 50px;
   border: none;
   font-weight: bold;
+  font-size: 2.5vw;
 }
 
 .cta:hover {
@@ -74,25 +76,26 @@ img {
 /*hero section ---------------------------------------------------------------------------------------*/
 main {
   position: relative;
+  height: calc(100 * var(--vh));
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   text-align: center;
-  /* background: hsl(217, 28%, 15%); */
-  background: red;
+  background: hsl(217, 28%, 15%);
 }
 
 header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 2em 2em;
+  padding: 4vw;
+  margin-bottom: 10vw;
 }
 
 header > ul > li > a {
   text-decoration: none;
   color: rgb(212, 209, 209);
-  font-size: 0.8rem;
+  font-size: 3vw;
 }
 
 header > ul > li > a:hover {
@@ -108,15 +111,25 @@ header > ul {
   display: flex;
   flex-basis: 50%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 5vw;
 }
 
 header > img {
-  width: 5em;
+  width: 20vw;
+}
+
+#second-half-main-background-div {
+  position: absolute;
+  bottom: 0;
+  top: 104vw;
+  left: 0;
+  right: 0;
+  background: hsl(218, 28%, 13%);
 }
 
 #main-illustration-container {
-  padding: 0 2em;
+  padding: 0 17vw;
 }
 
 #main-illustration-container > img {
@@ -129,32 +142,29 @@ main > section > img:nth-of-type(1) {
   margin-bottom: -1em;
 }
 
-/* first section  -----------------------------------------------------------------------------*/
-/* transition zone h1-para-overlap-main-first-section-container */
-
-#h1-para-overlap-main-first-section-container {
+#main-h1-para-container {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  gap: 1em;
+  gap: 5vw;
   align-items: center;
-  margin-top: -10.5em;
-  margin-bottom: 3em;
+  bottom: 20vw;
+  padding: 0 3vw;
 }
 
-#h1-para-overlap-main-first-section-container > h1 {
-  font-size: 5.9vw;
+#main-h1-para-container > h1 {
+  font-size: 7.5vw;
 }
 
-#h1-para-overlap-main-first-section-container > p {
+#main-h1-para-container > p {
   font-size: 4vw;
 }
 
-#h1-para-overlap-main-first-section-container > .cta {
+#main-h1-para-container > .cta {
   margin-top: -1em;
-  width: 20em;
 }
+/* first section  -----------------------------------------------------------------------------*/
 
 #first-section-flex-wrapper {
   display: flex;
@@ -476,86 +486,175 @@ footer > ul {
 
 /* media queries ------------------------------------------------------------------------------------------------ */
 
-@media only screen and (min-width: 320px) {
-  #form-wrapper > form > button {
-    padding: 1em 2em 1em 2em;
+@media only screen and (width: 375px) and (height: 812px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 120vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
   }
-}
 
-@media only screen and (min-width: 375px) {
-  #h1-para-overlap-main-first-section-container {
+  #main-illustration-container {
+    padding: 0 5vw;
+  }
+
+  #main-h1-para-container {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 2em;
+    gap: 7vw;
     align-items: center;
-    margin-top: -10.5em;
-    margin-bottom: 3em;
+    bottom: 20vw;
   }
 
-  #h1-para-overlap-main-first-section-container > h1 {
-    font-size: 6vw;
-  }
-
-  #h1-para-overlap-main-first-section-container > p {
+  #main-h1-para-container > p {
     font-size: 4.5vw;
+    line-height: 9.5vw;
+    padding: 0 4.5vw;
   }
 }
 
-@media only screen and (min-width: 411px) {
-  #h1-para-overlap-main-first-section-container {
+@media only screen and (width: 411px) and (height: 823px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 120vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
+  }
+
+  #main-illustration-container {
+    padding: 0 5vw;
+  }
+
+  #main-h1-para-container {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 1em;
+    gap: 4vw;
     align-items: center;
-    margin-top: -10.5em;
-    margin-bottom: 3em;
+    bottom: 20vw;
   }
 
-  #h1-para-overlap-main-first-section-container > h1 {
-    font-size: 5.9vw;
-    margin-bottom: 1em;
-  }
-
-  #h1-para-overlap-main-first-section-container > p {
-    font-size: 4vw;
-    margin-bottom: 1em;
-  }
-
-  #h1-para-overlap-main-first-section-container > .cta {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    width: 20em;
+  #main-h1-para-container > p {
+    font-size: 4.5vw;
+    line-height: 9vw;
+    padding: 0 4.5vw;
   }
 }
 
-@media only screen and (min-width: 414px) {
-  #h1-para-overlap-main-first-section-container {
+@media only screen and (width: 768px) and (height: 1024px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 90vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
+  }
+
+  #main-illustration-container {
+    margin-top: -10vw;
+    padding: 0 20vw;
+  }
+
+  #main-h1-para-container {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 1em;
+    gap: 4vw;
     align-items: center;
-    margin-top: -10.5em;
-    margin-bottom: 3em;
+    bottom: 30vw;
   }
 
-  #h1-para-overlap-main-first-section-container > h1 {
-    font-size: 5.9vw;
+  #main-h1-para-container > h1 {
+    font-size: 6vw;
+    padding: 0 5vw;
   }
 
-  #h1-para-overlap-main-first-section-container > p {
-    margin-top: -1em;
-    font-size: 4vw;
+  #main-h1-para-container > p {
+    font-size: 3vw;
+    line-height: 5.5vw;
+    padding: 0 15vw;
+  }
+}
+
+@media only screen and (width: 1024px) and (height: 1366px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 90vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
   }
 
-  #h1-para-overlap-main-first-section-container > .cta {
-    margin-top: -0.5em;
-    margin-bottom: 2em;
-    width: 20em;
+  #main-illustration-container {
+    margin-top: -8vw;
+    padding: 0 20vw;
+  }
+
+  #main-h1-para-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 4vw;
+    align-items: center;
+    bottom: 30vw;
+  }
+
+  #main-h1-para-container > h1 {
+    font-size: 6vw;
+    padding: 0 5vw;
+  }
+
+  #main-h1-para-container > p {
+    font-size: 3vw;
+    line-height: 5.5vw;
+    padding: 0 15vw;
+  }
+}
+
+@media only screen and (width: 540px) and (height: 720px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 90vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
+  }
+
+  #main-illustration-container {
+    margin-top: -8vw;
+    padding: 0 20vw;
+  }
+
+  #main-h1-para-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 4vw;
+    align-items: center;
+    bottom: 30vw;
+  }
+
+  #main-h1-para-container > h1 {
+    font-size: 6vw;
+    padding: 0 5vw;
+  }
+
+  #main-h1-para-container > p {
+    font-size: 3vw;
+    line-height: 5.5vw;
+    padding: 0 15vw;
   }
 }

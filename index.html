@@ -8,6 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      window.addEventListener("resize", () => {
+        document
+          .querySelector(":root")
+          .style.setProperty("--vh", window.innerHeight / 100 + "px");
+      });
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
@@ -25,15 +32,15 @@
           <li><a href="">Sign In</a></li>
         </ul>
       </header>
+
+      <div id="second-half-main-background-div"></div>
       <section id="main-img-container">
         <div id="main-illustration-container">
           <img src="images/illustration-intro.png" alt="illustration-intro" />
         </div>
         <img src="images/bg-curvy-mobile.svg" alt="bg-curvy-mobile" />
       </section>
-    </main>
-    <section id="first-section-flex-wrapper">
-      <div id="h1-para-overlap-main-first-section-container">
+      <div id="main-h1-para-container">
         <h1>All your files in one secure location, accessible anywhere.</h1>
         <p>
           Fylo stores all you most important files in one secure location.
@@ -42,6 +49,8 @@
         </p>
         <button class="cta">Get Started</button>
       </div>
+    </main>
+    <section id="first-section-flex-wrapper">
       <div>
         <img
           class="first-section-img"
