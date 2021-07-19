@@ -9,11 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script>
-      window.addEventListener("resize", () => {
-        document
-          .querySelector(":root")
-          .style.setProperty("--vh", window.innerHeight / 100 + "px");
-      });
+      document
+        .querySelector("main")
+        .style.setProperty("height", window.innerHeight + "px");
     </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"

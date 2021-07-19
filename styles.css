@@ -76,7 +76,6 @@ img {
 /*hero section ---------------------------------------------------------------------------------------*/
 main {
   position: relative;
-  height: calc(100 * var(--vh));
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -589,7 +588,7 @@ footer > ul {
   #second-half-main-background-div {
     position: absolute;
     bottom: 0;
-    top: 90vw;
+    top: 95vw;
     left: 0;
     right: 0;
     background: hsl(218, 28%, 13%);
@@ -656,5 +655,36 @@ footer > ul {
     font-size: 3vw;
     line-height: 5.5vw;
     padding: 0 15vw;
+  }
+}
+
+@media only screen and (width: 280px) and (height: 653px) {
+  #second-half-main-background-div {
+    position: absolute;
+    bottom: 0;
+    top: 120vw;
+    left: 0;
+    right: 0;
+    background: hsl(218, 28%, 13%);
+  }
+
+  #main-illustration-container {
+    padding: 0 5vw;
+  }
+
+  #main-h1-para-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 10vw;
+    align-items: center;
+    bottom: 15vw;
+  }
+
+  #main-h1-para-container > p {
+    font-size: 4.5vw;
+    line-height: 9vw;
+    padding: 0 4.5vw;
   }
 }
